@@ -17,6 +17,7 @@ class TestProvider with ChangeNotifier{
    _testWidgetMapByIdName.putIfAbsent('Audio Test', () => const AudioTest());
   }
 
+  List<AbstractTest> get
 
   AbstractTest getWidgetTestById(String testIdName) {
 
