@@ -1,10 +1,5 @@
 
-
-import 'dart:html';
-
-
 import 'package:flutter/material.dart';
-
 import 'package:testflutter/widgets/audio_test.dart';
 
 import '../widgets/abstracttest.dart';
@@ -17,7 +12,9 @@ class TestProvider with ChangeNotifier{
    _testWidgetMapByIdName.putIfAbsent('Audio Test', () => const AudioTest());
   }
 
-  List<AbstractTest> get
+  List<AbstractTest> get allTestWidgets {
+    return _testWidgetMapByIdName.values.toList();
+  }
 
   AbstractTest getWidgetTestById(String testIdName) {
 

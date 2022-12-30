@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:testflutter/providers/test_provider.dart';
+import 'package:testflutter/screen/test_detail_screen.dart';
+import 'package:testflutter/screen/tests_screen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -14,10 +16,9 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MultiProvider(providers: [
       ChangeNotifierProvider(create: (_) => TestProvider())
-
     ],child:
     MaterialApp(
-      title: 'Flutter Demo',
+      title: 'Flutter Test App',
       theme: ThemeData(
         // This is the theme of your application.
         //
@@ -30,8 +31,12 @@ class MyApp extends StatelessWidget {
         // is not restarted.
         primarySwatch: Colors.blue,
       ),
-      home: const MyHomePage(title: 'Flutter Demo Home Page'),
-    );
+      home: const TestsScreen(),  //const MyHomePage(title: 'Flutter Demo Home Page'),
+      routes: {
+        TestDetailScreen.routeName:(ctx) => const TestDetailScreen(),
+      },
+
+    )
     ,);
 
   }

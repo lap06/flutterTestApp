@@ -5,13 +5,12 @@ import 'package:provider/provider.dart';
 import 'package:testflutter/providers/test_provider.dart';
 import 'package:testflutter/widgets/abstracttest.dart';
 
-class TestScreen extends StatelessWidget {
+class TestDetailScreen extends StatelessWidget {
 
   // route name of this screen
   static const routeName = '/test-detail';
 
-
-  const TestScreen({Key? key}) : super(key: key);
+  const TestDetailScreen({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
